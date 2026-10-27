@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scholar Scribe Consulting</title>
+<meta name="description" content="Report checks and systematic reviews. Every reference, quote and figure checked against its source, and every finding signed off by a physician.">
+<link rel="canonical" href="https://scholarscribeconsulting.com/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scholarscribeconsulting.com/">
+<meta property="og:title" content="Scholar Scribe Consulting">
+<meta property="og:description" content="Report checks and systematic reviews. Every reference, quote and figure checked against its source, and every finding signed off by a physician.">
+<meta property="og:image" content="https://scholarscribeconsulting.com/preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f6f8f7">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one 68ch column of running prose, broken by full-width rule-bound grids
+     (the deliverables lists and the turnaround tables), in the manner of a methods document. */
+  :root {
+    --bg:        #f6f8f7;
+    --surface:   #ffffff;
+    --fg:        #16211f;
+    --muted:     #5b6a67;
+    --line:      #d6dedc;
+    --accent:    #0f5a53;
+    --accent-bg: #e8f0ee;
+    --flag:      #8a4b12;
+    --flag-bg:   #fbf1e5;
+
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans:  "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono:  "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:        #0f1413;
+      --surface:   #171f1d;
+      --fg:        #e7ecea;
+      --muted:     #9bA8a5;
+      --line:      #2a3634;
+      --accent:    #5fb8aa;
+      --accent-bg: #14302c;
+      --flag:      #e0a569;
+      --flag-bg:   #2a1f12;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:        #0f1413;
+    --surface:   #171f1d;
+    --fg:        #e7ecea;
+    --muted:     #9bA8a5;
+    --line:      #2a3634;
+    --accent:    #5fb8aa;
+    --accent-bg: #14302c;
+    --flag:      #e0a569;
+    --flag-bg:   #2a1f12;
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-block: 2rem 4rem;
+  }
+  p { margin: 0; max-width: 68ch; }
+  h1, h2, h3 { margin: 0; font-family: var(--serif); text-wrap: balance; font-weight: 600; }
+
+  .brand { margin: 0 0 2.25rem; }
+  .brand img { display: block; width: 14rem; max-width: 70%; height: auto; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .brand img { background: #ffffff; padding: 0.4rem 0.7rem; border-radius: 4px; }
+  }
+  :root[data-theme="dark"] .brand img { background: #ffffff; padding: 0.4rem 0.7rem; border-radius: 4px; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1.25rem;
+  }
+  h1 { font-size: clamp(1.85rem, 5.2vw, 2.75rem); line-height: 1.16; letter-spacing: -0.015em; }
+  .lede { margin-top: 1.5rem; font-size: 1.0625rem; color: var(--muted); }
+  .lede b { color: var(--fg); font-weight: 600; }
+
+  .contact {
+    margin-top: 2.25rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 1rem 1.15rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+  }
+  .contact .addr { font-family: var(--mono); font-size: 0.9375rem; user-select: all; min-width: 0; overflow-wrap: anywhere; }
+  .contact button {
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 1px solid var(--accent);
+    padding: 0.35rem 0.8rem;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .contact button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  section { margin-top: 3.75rem; }
+  h2 {
+    font-size: 1.375rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.01em;
+  }
+  .after-h2 { margin-top: 1.5rem; }
+  .part { margin-top: 5rem; }
+  .part .eyebrow { margin-bottom: 1rem; }
+  .part h2 { font-size: clamp(1.45rem, 3.6vw, 1.85rem); line-height: 1.2; }
+  .part .lede { margin-top: 1.25rem; }
+  .subhead { margin-top: 2.25rem; font-family: var(--sans); font-size: 1.0625rem; font-weight: 600; }
+
+  .deliver { margin-top: 1.75rem; display: grid; gap: 0; }
+  .deliver > div { padding: 1.5rem 0; border-bottom: 1px solid var(--line); display: grid; gap: 0.55rem; }
+  .deliver > div:first-child { padding-top: 0.25rem; }
+  .deliver h3 { font-size: 1.0625rem; font-family: var(--sans); font-weight: 600; }
+  .deliver p { font-size: 0.9375rem; color: var(--muted); }
+
+  .checks { margin: 1rem 0 0; padding: 0; list-style: none; counter-reset: chk; display: grid; gap: 0.7rem; }
+  .checks li { counter-increment: chk; display: grid; grid-template-columns: 1.75rem 1fr; font-size: 0.9375rem; color: var(--muted); max-width: 68ch; }
+  .checks li::before { content: counter(chk); font-family: var(--mono); font-size: 0.8125rem; color: var(--accent); padding-top: 0.1rem; }
+
+  .stats {
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .stats div { padding: 1.1rem 1.15rem; border-right: 1px solid var(--line); min-width: 0; }
+  .stats div:last-child { border-right: 0; }
+  .stats .n { font-family: var(--serif); font-size: 1.75rem; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .stats .k { font-size: 0.8125rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.45; }
+
+  .conduct { margin-top: 1.5rem; display: grid; gap: 1.1rem; }
+  .conduct > div { display: grid; gap: 0.3rem; padding-left: 1rem; border-left: 2px solid var(--accent); }
+  .conduct dt { font-weight: 600; font-size: 0.9375rem; }
+  .conduct dd { margin: 0; font-size: 0.9375rem; color: var(--muted); }
+
+  .tablewrap { margin-top: 1.75rem; overflow-x: auto; border: 1px solid var(--line); }
+  table { border-collapse: collapse; width: 100%; background: var(--surface); font-size: 0.9375rem; }
+  th, td { text-align: left; padding: 0.8rem 1.15rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  thead th { font-family: var(--mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  tbody tr:last-child td { border-bottom: 0; }
+  td:last-child { font-family: var(--mono); white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--accent); }
+
+  .who { margin-top: 1.75rem; border: 1px solid var(--line); background: var(--surface); padding: 1.35rem 1.5rem; display: grid; gap: 0.6rem; }
+  .who .nm { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; }
+  .who .cr { font-size: 0.9375rem; color: var(--muted); }
+
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); font-size: 0.8125rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+  footer .mono { font-family: var(--mono); overflow-wrap: anywhere; }
+  footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover, footer a:focus-visible { border-bottom-color: var(--accent); }
+  .note { font-size: 0.8125rem; color: var(--muted); margin-top: 1rem; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="brand"><img src="logo.png" alt="Scholar Scribe Consulting" width="560" height="308"></header>
+
+  <p class="eyebrow">Report checks &middot; Systematic reviews</p>
+  <h1>Every reference, quote and figure in a report, checked against its source.</h1>
+  <p class="lede">Scholar Scribe Consulting checks reports for the firms that write them and the agencies that commission them, and runs systematic reviews for health economics, medical communications and clinical evaluation teams. <b>AI reads every source in full; a physician checks and signs off every finding before it reaches you.</b></p>
+
+  <div class="contact">
+    <span class="addr" id="addr">academic@scholarscribeconsulting.com</span>
+    <button type="button" id="copy" aria-live="polite">Copy address</button>
+  </div>
+
+  <section>
+    <h2>Report checks</h2>
+    <div class="deliver">
+      <div>
+        <h3>Before release</h3>
+        <p>For firms that write reports: each reference, quote, figure and conclusion checked before the report reaches your client, with every issue returned with its evidence and the correct citation.</p>
+      </div>
+      <div>
+        <h3>On receipt</h3>
+        <p>For agencies that commission reports: the same check before a report is accepted, paid for or published.</p>
+      </div>
+      <div>
+        <h3>After a correction</h3>
+        <p>Each correction checked, and the whole report checked again for anything new that went wrong.</p>
+      </div>
+      <div>
+        <h3>What you receive</h3>
+        <p>An evidence pack with one page per issue: the report&rsquo;s words beside the source&rsquo;s, with links to both documents.</p>
+      </div>
+    </div>
+
+    <h3 class="subhead">Every footnote goes through five checks</h3>
+    <ol class="checks">
+      <li>The cited work exists as cited: authors, title, year, journal or publisher, volume, pages and link.</li>
+      <li>Read in full, the work says what the report says it says, at the page cited.</li>
+      <li>Every figure is recalculated from the cited data.</li>
+      <li>Each conclusion follows from its evidence and agrees with the rest of the report.</li>
+      <li>Where a report has been corrected, every change between versions is checked.</li>
+    </ol>
+    <p class="note">The rules for what counts as an issue are set before checking begins. Your reports and our findings stay between us.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Work</th><th scope="col">Commitment</th></tr></thead>
+        <tbody>
+          <tr><td>Report check, up to 250 pages</td><td>1 working day</td></tr>
+          <tr><td>Longer reports</td><td>quoted on length</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">To quote, send the report or its page count, and the date you need it by.</p>
+  </section>
+
+  <div class="part">
+    <p class="eyebrow">Evidence synthesis &middot; subcontracted capacity</p>
+    <h2>Systematic review capacity for teams carrying more evidence work than hours.</h2>
+    <p class="lede">Scholar Scribe Consulting runs systematic reviews, literature searches and trial&#8209;trustworthiness screening as subcontracted capacity for health economics, medical communications and clinical evaluation teams. <b>Every review is run to PRISMA 2020 and signed by the physician who assessed it.</b></p>
+  </div>
+
+  <section>
+    <h2>What we deliver</h2>
+    <div class="deliver">
+      <div>
+        <h3>Systematic reviews and meta-analysis</h3>
+        <p>Protocol and PROSPERO registration, search strategies across MEDLINE, Embase, CENTRAL and the trial registries, dual independent screening with recorded adjudication, extraction to your template, risk of bias by RoB&nbsp;2 or ROBINS&#8209;I, meta-analysis in R, and GRADE certainty tables.</p>
+      </div>
+      <div>
+        <h3>Targeted and rapid literature reviews</h3>
+        <p>Scoped reviews for reimbursement and HTA dossiers, including NICE, PBAC, CADTH and the EU Joint Clinical Assessment. You receive de-duplicated record counts, the PRISMA flow diagram, and a search log that holds up inside a submission.</p>
+      </div>
+      <div>
+        <h3>Trial trustworthiness screening</h3>
+        <p>INSPECT&#8209;SR, the 21-check tool Cochrane endorsed on 24 September 2026, applied to the trials in your review before they reach your analysis. Detailed below.</p>
+      </div>
+      <div>
+        <h3>Clinical evaluation literature reviews</h3>
+        <p>Literature appraisal for clinical evaluation reports and post-market clinical follow-up under EU MDR 2017/745, with the appraisal criteria stated and the reasoning for every excluded record written out rather than summarised.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Trustworthiness screening, in detail</h2>
+    <p class="after-h2">A review is only as sound as the trials inside it. INSPECT&#8209;SR asks 21 questions about a randomised trial across four domains before that trial is allowed to carry weight in an analysis.</p>
+
+    <div class="stats">
+      <div><div class="n">21</div><div class="k">checks, across four domains</div></div>
+      <div><div class="n">21-45</div><div class="k">minutes per trial, assessed by hand</div></div>
+      <div><div class="n">29%</div><div class="k">of 206 COVID&#8209;19 trials excluded for integrity concerns</div></div>
+      <div><div class="n">60%</div><div class="k">fall in usable trials per meta-analysis once screening is applied</div></div>
+    </div>
+
+    <p class="note">Figures from the published evaluation of the tool across 23 reviews; a further 38% of those trials could not be resolved either way.</p>
+
+    <p style="margin-top:1.5rem">Done by hand the tool needs two assessors working independently, with a senior adjudication wherever they disagree. We hold a local copy of the full Retraction Watch database, 73,356 records, so the retraction and post-publication notice checks return immediately; the remaining checks are worked by hand against the published guidance, which is the only way they can be worked. You receive the completed checklist for every trial and the decision log behind it.</p>
+    <p class="note">INSPECT&#8209;SR is published under CC&nbsp;BY&nbsp;4.0 and licensed for commercial use with citation. We cite it in every deliverable.</p>
+  </section>
+
+  <section>
+    <h2>How the work is run</h2>
+    <dl class="conduct">
+      <div>
+        <dt>AI assists the first pass. A physician signs every decision.</dt>
+        <dd>Screening and extraction are accelerated by machine, then reviewed by a clinician who is accountable for the call. No decision reaches you unread.</dd>
+      </div>
+      <div>
+        <dt>You get the decision log, not just the result.</dt>
+        <dd>Every include, exclude and unresolved call is recorded with its reason, so your team can audit the review instead of taking it on trust.</dd>
+      </div>
+      <div>
+        <dt>Searches are reproducible as run.</dt>
+        <dd>Strategy, databases, dates and hit counts are supplied exactly as executed, never reconstructed after the fact to look tidier.</dd>
+      </div>
+      <div>
+        <dt>Nothing is reported that was not read.</dt>
+        <dd>A record we could not retrieve stays marked as not retrieved. A check we could not complete is reported as incomplete, with the reason.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Turnaround</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Work</th><th scope="col">Commitment</th></tr></thead>
+        <tbody>
+          <tr><td>Title and abstract screening, 2,000 de-duplicated records</td><td>5 working days</td></tr>
+          <tr><td>One PICO, from agreed protocol to populated extraction tables</td><td>10 working days</td></tr>
+          <tr><td>Full review with meta-analysis and GRADE</td><td>4-6 weeks</td></tr>
+          <tr><td>Trustworthiness screening</td><td>quoted on trial count</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Quoted against an agreed protocol. Where a deadline cannot be met we say so before the work starts, not at the end of it.</p>
+  </section>
+
+  <section>
+    <h2>Who does the work</h2>
+    <div class="who">
+      <div class="nm">Dr Minal Kharat</div>
+      <div class="cr">MBBS, Chhattisgarh Institute of Medical Sciences, Bilaspur &middot; based in India, working to UK, EU, US and Australian deadlines</div>
+      <p class="cr">The reviews are conducted and signed by one physician rather than passed down a bench of juniors. You deal with the person who read the papers. On request we supply three completed reviews and the decision logs that came with them.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Starting a piece of work</h2>
+    <p class="after-h2">To quote we need four things: the research question or PICO, the databases you want covered, your extraction template if you have one, and the date you need it by. Send those to the address above and you get a scope and a price, not a brochure.</p>
+  </section>
+
+  <footer>
+    <span>Scholar Scribe Consulting</span>
+    <span class="mono">academic@scholarscribeconsulting.com</span>
+    <span class="mono"></span>
+    <span class="mono"><a href="https://www.linkedin.com/in/minal-kharat-a1a877168">linkedin.com/in/minal-kharat-a1a877168</a></span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy');
+    var addr = document.getElementById('addr');
+    if (!btn || !addr) return;
+    var label = btn.textContent;
+    btn.addEventListener('click', function () {
+      var text = addr.textContent.trim();
+      var done = function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = label; }, 1800);
+      };
+      var fallback = function () {
+        try {
+          var r = document.createRange();
+          r.selectNodeContents(addr);
+          var s = window.getSelection();
+          s.removeAllRanges();
+          s.addRange(r);
+          btn.textContent = 'Selected, press Ctrl+C';
+          setTimeout(function () { btn.textContent = label; }, 2600);
+        } catch (e) {
+          btn.textContent = label;
+        }
+      };
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else {
+          fallback();
+        }
+      } catch (e) {
+        fallback();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
