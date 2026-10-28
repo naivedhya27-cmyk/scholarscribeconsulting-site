@@ -330,6 +330,12 @@ button { font: inherit; }
   .rv, .papers .sheet, .how *, .how *::after { transition: none !important; }
 }
 
+/* wide screens: a wider page, and everything scaled up a little so the sides do not sit empty */
+@media (min-width: 1500px) { :root { --maxw: 1280px; } body { zoom: 1.06; } }
+@media (min-width: 1680px) { :root { --maxw: 1320px; } body { zoom: 1.12; } }
+@media (min-width: 1900px) { body { zoom: 1.18; } }
+@media (min-width: 2400px) { body { zoom: 1.32; } }
+
 /* desktop without the scrolling desk: keep the finished issue page in view beside the steps */
 @media (min-width: 1024px) {
   .how:not(.is-scrolly) .desk { position: sticky; top: 112px; }

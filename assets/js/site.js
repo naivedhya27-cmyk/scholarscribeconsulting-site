@@ -64,7 +64,7 @@
   /* how one issue is found: on wide, tall screens the step in the middle of the screen sets the desk */
   var how = $('.how'), desk = how && $('.desk', how);
   if (how && desk && 'IntersectionObserver' in w && w.matchMedia) {
-    var mq = w.matchMedia('(min-width: 1024px) and (min-height: 680px) and (max-height: 1300px)');
+    var mq = w.matchMedia('(min-width: 1024px) and (min-height: 680px) and (max-height: 1700px)');
     var steps = $$('.step', how), io = null;
     var setStep = function (n) {
       desk.setAttribute('data-at', String(n));
