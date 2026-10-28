@@ -133,7 +133,7 @@ button { font: inherit; color: inherit; }
 }
 .site-header.is-scrolled .nav { background: rgba(255, 255, 255, .94); box-shadow: 0 16px 40px -18px rgba(2, 12, 36, .45); }
 .nav__logo { display: block; flex: none; }
-.nav__logo img { height: 44px; width: auto; }
+.nav__logo img { height: 50px; width: auto; }
 .nav__links { display: flex; align-items: center; gap: 4px; margin-left: auto; }
 .nav__links a {
   position: relative; padding: 10px 14px; border-radius: 10px; text-decoration: none;
@@ -164,7 +164,7 @@ html.menu-open .nav__burger span:nth-child(2) { top: 22px; transform: rotate(-45
 
 /* ---------- page curtain ---------- */
 .curtain { position: fixed; inset: 0; z-index: 100; background: var(--navy-950); transform: translateY(100%); display: grid; place-items: center; pointer-events: none; }
-.curtain__mark { width: 56px; opacity: 0; }
+.curtain__mark { width: 72px; opacity: 0; }
 html.is-intro .curtain { transform: translateY(0); animation: curtain-out .9s var(--ease-io) .75s forwards; }
 html.is-intro .curtain__mark { animation: mark-in .8s var(--ease-out) .05s forwards; }
 html.is-entering .curtain { transform: translateY(0); animation: curtain-out .85s var(--ease-io) .1s forwards; }
@@ -411,7 +411,7 @@ html.is-entering .curtain { transform: translateY(0); animation: curtain-out .85
 /* ---------- person ---------- */
 .person { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(36px, 6vw, 96px); align-items: center; }
 .person__visual { position: relative; aspect-ratio: 1; max-width: 460px; width: 100%; justify-self: center; display: grid; place-items: center; }
-.person__visual img { width: 34%; position: relative; z-index: 2; filter: drop-shadow(0 20px 30px rgba(2, 12, 36, .18)); }
+.person__visual img { width: 44%; position: relative; z-index: 2; filter: drop-shadow(0 20px 30px rgba(2, 12, 36, .18)); }
 .person__visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .ring { fill: none; stroke: var(--line); stroke-width: 1; transform-origin: 50% 50%; }
 .ring--dash { stroke: var(--teal-400); stroke-dasharray: 2 10; stroke-width: 2; animation: spin 40s linear infinite; }
@@ -602,7 +602,7 @@ html.reveal-all .draw [pathLength] { stroke-dashoffset: 0 !important; }
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .nav { height: 60px; padding-left: 14px; }
-  .nav__logo img { height: 32px; }
+  .nav__logo img { height: 38px; }
   .hero { padding-top: 116px; }
   .hero__actions .btn { width: 100%; justify-content: center; }
   .fchip { font-size: .78rem; padding: 7px 11px 7px 8px; }
